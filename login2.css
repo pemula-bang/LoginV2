@@ -1,0 +1,588 @@
+/*menghilangkan radio*/
+#bg1, #t1 {
+    display: none;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+
+.gambar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 40% 100%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.kotak1 {
+    position: relative;
+    width: 90vw;
+    height: 75vh;
+    background: #ffffff;
+    top: 10vh;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+/*pengaturan gambar tengah----------------------------------*/
+.kamera {
+    position: absolute;
+    width: 80vw;
+    height: 73vh;
+    border: 2px solid rgb(255, 255, 255);
+    overflow: hidden;
+    right: 6px;
+    top: 6px;
+    clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 40% 100%);
+    border-radius: 15px;
+}
+
+.kamera1 {
+    position: absolute;
+    width: 72.6vw;
+    height: 73vh;
+    border: 2px solid white;
+    overflow: hidden;
+    left: 6px;
+    top: 6px;
+    clip-path: polygon(0% 0%, 50% 0%, 55.4% 100%, 0% 100%);
+    border-radius: 15px;
+}
+/*----------------------------------------------------------*/
+
+
+/*posisi gambar---------------- */
+.gambar2 {
+    position: absolute;
+    top: -16.6%;
+    right: -5.2%;
+    width: 101vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.gambar3 {
+    position: absolute;
+    top: -55%;
+    left: -30%;
+    filter: blur(2px);
+    z-index: -1;
+    pointer-events: none;
+}
+/*-----------------------------*/
+
+
+/* judul, nama, pw, login 1----------*/
+.judul1 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    top: 22%;
+    left: 7%;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    font-weight: bolder;
+}
+
+.judul2 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    top: 30%;
+    left: 7%;
+    z-index: 1;
+}
+
+.nama1 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    width: 25%;
+    top: 40%;
+    left: 7%;
+    z-index: 1;
+    outline: none;
+}
+
+.pw1 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    top: 48%;
+    left: 7%;
+    width: 25%;
+    z-index: 1;
+    outline: none;
+}
+
+.login {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    background: white;
+    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 75%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ulang {
+    position: absolute;
+    top: 55%;
+    left: 20.5%;
+    background: white;
+    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 75%;
+    cursor: pointer;
+    user-select: none;
+}
+/*----------------------------*/
+
+
+
+/*letak objek di gambar----------------------*/
+.text {
+    position: fixed;
+    top: 75vh;
+    left: 50vw;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(24, 24, 24);
+    right: 12.2%;
+    top: 13.4%;
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 100%;
+}
+
+.text1 {
+    position: fixed;
+    right: 6%;
+    top: 10.8%;
+}
+/*-------------------------------------------*/
+
+
+/*musik--------------------------------------------------------------*/
+.musik {
+    position: fixed;
+    top: 1vh;
+    left: 1vw;
+    display: none;
+}
+
+
+/* tombol kontrol---------------------------------- */
+.pause {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    top: 13vh;
+    right: 52vw;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100% );
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lanjut {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    top: 13vh;
+    right: 50vw;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100% );
+    cursor: pointer;
+}
+
+.kembali {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    top: 13vh;
+    right: 54vw;
+    clip-path: polygon(0% 50%, 100% 100%, 100% 0% );
+    cursor: pointer;
+}
+/*-------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+
+/*detail kecil fase pertama--------------------------------*/
+.pause:active {
+    transform: scale(0.7);
+    transition: 0.1s ease-in-out;
+    
+}
+
+.lanjut:active {
+    transform: scale(0.7);
+    transition: 0.1s ease-in-out;
+    
+}
+
+.kembali:active {
+    transform: scale(0.7);
+    transition: 0.1s ease-in-out;
+    
+}
+
+.logo:hover {
+    color: rgb(24, 24, 24);
+    color: white;
+    cursor: pointer;
+}
+
+.judul1:hover {
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+    
+}
+
+.judul2:hover {
+    color: white;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.login:active {
+    transform: scale(0.8);
+    transition: 0.1s ease-in-out;
+     background: rgb(24, 24, 24);
+}
+
+.ulang:active {
+    transform: scale(0.8);
+    transition: 0.1s ease-in-out;
+     background: rgb(24, 24, 24);
+}
+
+.text:hover {
+    color: rgb(24, 24, 24);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nama1:focus {
+    outline-style: double;
+    outline-color: rgb(255, 255, 255);
+    background: rgb(24, 24, 24);
+    color: white;
+    transition: 0.5s ease;
+    
+}
+
+.pw1:focus {
+    outline-style: double;
+    outline-color: rgb(255, 255, 255);
+    background: rgb(24, 24, 24);
+    color: white;
+    transition: 0.5s ease;
+}
+
+/*--detail kecil fase kedua-------------------------*/
+.judul11:hover {
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+    
+}
+
+.judul22:hover {
+    color: white;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.nama11:focus {
+    outline-style: double;
+    outline-color: rgb(255, 255, 255);
+    background: rgb(24, 24, 24);
+    color: white;
+    transition: 0.5s ease;
+    
+}
+
+.pw11:focus {
+    outline-style: double;
+    outline-color: rgb(255, 255, 255);
+    background: rgb(24, 24, 24);
+    color: white;
+    transition: 0.5s ease;
+}
+
+.bikin:active {
+    transform: scale(0.8);
+    transition: 0.1s ease-in-out;
+     background: rgb(24, 24, 24);
+}
+
+.pernah:active {
+    transform: scale(0.8);
+    transition: 0.1s ease-in-out;
+     background: rgb(24, 24, 24);
+}
+
+/*--------------------------------------------------------*/
+
+/*Jangan di kasih tau------------------------------------*/
+
+/* ubah warna-------------------------*/
+body:has(#bg1:checked) {
+   background: rgb(24, 24, 24);
+   transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 {
+    background: rgb(24, 24, 24);
+    transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 .kamera .logo {
+     background: rgb(24, 24, 24);
+     color: white;
+     transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 .kamera .text {
+     color: rgb(24, 24, 24);
+      transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 .kamera .text1 {
+     color: rgb(255, 255, 255);
+      transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 .kamera .pause {
+     background: rgb(24, 24, 24);
+     transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 .kamera .lanjut {
+     background: rgb(24, 24, 24);
+     transition: 0.5s ease-in-out;
+}
+
+#bg1:checked ~ .kotak1 .kamera .kembali {
+     background: rgb(24, 24, 24);
+     transition: 0.5s ease-in-out;
+}
+/*----------------------------------*/
+
+
+/*menghilangkan fase satu------------*/
+#bg1:checked ~ .kotak1 .judul1 {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#bg1:checked ~ .kotak1 .judul2 {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#bg1:checked ~ .kotak1 .nama1 {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#bg1:checked ~ .kotak1 .pw1 {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#bg1:checked ~ .kotak1 .login {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#bg1:checked ~ .kotak1 .ulang {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+/*----------------------------------*/
+
+
+/*--munculkan fase kedua---------------*/
+#bg1:checked ~ .kotak1 .judul11 {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#bg1:checked ~ .kotak1 .judul22 {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#bg1:checked ~ .kotak1 .nama11 {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#bg1:checked ~ .kotak1 .pw11 {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#bg1:checked ~ .kotak1 .bikin {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#bg1:checked ~ .kotak1 .pernah {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+/*-------------------------------------*/
+
+
+/*-kembalikan fungsi tombol login*/
+#t1:checked ~ .kotak1 .login {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+/*-------------------------------*/
+
+/*---Fase kedua-------------------------------------------*/
+.judul11 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    top: 22%;
+    left: 7%;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    font-weight: bolder;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.judul22 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    top: 30%;
+    left: 7%;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nama11 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    width: 25%;
+    top: 40%;
+    left: 7%;
+    z-index: 1;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pw11 {
+    position: absolute;
+    color: rgb(24, 24, 24);
+    top: 48%;
+    left: 7%;
+    width: 25%;
+    z-index: 1;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bikin {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    background: white;
+    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 75%;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pernah {
+    position: absolute;
+    top: 55%;
+    left: 20.5%;
+    background: white;
+    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 75%;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*
+perasaaan tadi awal cuman pemanasan,
+kok malah jadi banyak gini ya.
+
+padahal ini cuman page login lo kok bisa sepanjang ini, hmm.
+ini gw gabut apa gak ada kerjaan sih, atau gw nya aja yg 
+agak Anomali*/
