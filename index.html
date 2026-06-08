@@ -4,79 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login2.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-
-        <!--janggan di kasih tau------------------->
-        <input type="radio" name="bg" id="bg1">
-        <input type="radio" name="bg" id="t1">
-        <!----------------------------------------->
-
-    <div class="kotak1">
+    <div class="kotak-kiri">
+        <div class="posisi-judul0">
+            <h1 class="judul0">Sistem <br> Informasi <br> Akademik</h1>
+        </div>
         
-<!--tampilan masuk-pertama------------------------------------------------------>        
-        <h1 class="judul1">HALLO BANG HUSEN</h1>
-        <p class="judul2">selamat datang di web mu sendiri</p>
-        <input type="text" class="nama1" placeholder="Masukan Nama">
-        <input type="password" class="pw1" placeholder="passwordmu Bang">
-        <div class="login">GASS LOGIN</div>
-        <label for="bg1" class="ulang">BUAT BARU</label>
-<!------------------------------------------------------------------------------>
-
-
-<!--Fase kedua-------------------------------------------------------------->
-        <h1 class="judul11">Perkenalkan Dirimu Nak</h1>
-        <p class="judul22">Jangan lupakan akun mu</p>
-        <input type="text" class="nama11" placeholder="Buat Nama">
-        <input type="password" class="pw11" placeholder="Buat password">
-        <div class="bikin">BIKIN</div>  
-        <label for="t1" class="pernah">PERNAH LOGIN</label>
-<!-------------------------------------------------------------------------->
-
-       
-
-<!--background----------------------------------------------------------------------------------------------->
-        <div class="kamera">
-            <img src="PGR1.jpg" class="gambar2"> 
-            
-                <!--text yg di gambar---------------------------------------------------------->
-                <h3 class="text">Jika bosan, tidak ada salahnya <br> memutar musik di sini</h3>
-                <div class="logo">
-                    <h3>H</h3>
-                </div>
-                <h3 class="text1">usenGTX</h3>
-                <!----------------------------------------------------------------------------->    
-
-                <!--tombol kontrol musik------------------>
-                <div class="pause" id="pause"></div>
-                <div class="lanjut" id="lanjut"></div>
-                <div class="kembali" id="kembali"></div>
-                <!--------------------------------------->
+        <div class="posisi-anak-judul0">
+            <h4 class="anak-judul0">Kelola KRS, Nilai, IPK, Kelas dan Jadwal Kuliah dalam satu web</h4>
         </div>
-
-        <div class="kamera1">
-            <img src="PGR1.jpg" class="gambar3">
-        </div>
-
+        
     </div>
 
-<!--wallpaper----------------------->
-<img src="PGR1.jpg" class="gambar1">
-<!---------------------------------->
+    <!--page login-------------->
+    <div class="kotak-kanan">
+        <div class="kotak-login">
+            <div class="posisi-judul-login">
+                <h3 class="judul-login">Masuk Ke Akun</h3>
+                <h5 class="anak-judul-login">Gunakan akun mahasisiwa atau dosen</h5>
+            </div>
+            
+            <div class="kotak-input">
+                <!------------------------------------------------------------------------>
+                <div class="posisi-nama">
+                    <h3 class="kata-nama">Nama</h3>
+                    <input type="text" class="nama" placeholder="Masukan username">
+                </div>
+                    
+            
+                <!------------------------------------------------------------------------>
+                <div class="posisi-pw">
+                    <h3 class="kata-pw">Password</h3>
+                    <input type="password" class="pw" placeholder="Masukan password">
+                </div>
 
-<!------------------------------------------------------------------------------------------------------------->
+
+                <!------------------------------------------------------------------------>
+                <button onclick="pindah1()" class="tombol">
+                    <h3 class="tulisan-tombol">Masuk</h3>
+                </button>
 
 
-<!--musik------------------------------------------------------------------>
-<audio controls class="musik" id="musik" src="Tie Me Down.flac"></audio>
+                <button onclick="pindah2()" class="tombol">
+                    <h3 class="tulisan-tombol">cuman testing untuk masuk ke dosen</h3>
+                </button>
+            </div>
 
-<!--daftar musik------------------------------------->
-<div class="lagu" data-src="Tie Me Down.flac"></div>
-<div class="lagu" data-src="Sailor Song.flac"></div>
-<!--------------------------------------------------->
-<!----------------------------------------------------------------------->
+            
+            
+        </div>
+        
 
+    </div>
 </body>
-<script src="login2.js"></script>
+    <script src="login.js"></script>
+
 </html>
