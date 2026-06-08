@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dosen3.css">
+</head>
+<body>
+
+
+
+
+    <div class="kotak-pinggir">
+        <div class="posisi-logo">
+            <img src="logo-stimik.webp" class="logo">
+            <h2 class="text-logo">STMIK</h2>
+        </div>
+
+            <div class="posisi-tombol">
+                <button onclick="pindah1()" class="tombol">
+                    <div class="text-tombol">Jadwal</div>
+                    <div class="lampu-tombol"></div>
+                </button>
+
+                <button onclick="pindah2()" class="tombol">
+                    <div class="text-tombol">Mahasiswa</div>
+                    <div class="lampu-tombol"></div>
+                </button>
+
+                <!-- Kasih class aktif-input khusus buat halaman Input ini -->
+                <button onclick="pindah3()" class="tombol aktif-input">
+                    <div class="text-tombol">Input</div>
+                    <div class="lampu-tombol"></div>
+                </button>
+            </div>
+    </div>
+
+
+
+
+            <div class="bungkus-utama">
+                <div class="bungkus1">
+                    <div class="setting-wrapper">
+
+                            <!-- LEFT -->
+                            <div class="setting-box">
+
+                                <h3>Pengaturan komponen</h3>
+
+                                <p>
+                                    Masukan komponen penilaian dan presentase
+                                    sesuai kontrak yang berlaku
+                                </p>
+
+                                <table>
+
+                                    <tr>
+                                        <th>Komponen penilaian</th>
+                                        <th>Presentase (%)</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder=" TUGAS">
+                                        </td>
+
+                                        <td>
+                                            <input type="text" placeholder="??%">
+                                        </td>
+
+                                        <td>
+                                            <button class="tombol3">Hapus</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="UTS">
+                                        </td>
+
+                                        <td>
+                                            <input type="text" placeholder="??%">
+                                        </td>
+
+                                        <td>
+                                            <button class="tombol3">Hapus</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="UAS">
+                                        </td>
+
+                                        <td>
+                                            <input type="text" placeholder="??%">
+                                        </td>
+
+                                        <td>
+                                            <button class="tombol3">Hapus</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="Proyek">
+                                        </td>
+
+                                        <td>
+                                            <input type="text" placeholder="??%">
+                                        </td>
+
+                                        <td>
+                                            <button class="tombol3">Hapus</button>
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="right-box">
+
+                                <div class="summary-box">
+                                    <h3>Total presentase : 100%</h3>
+                                    <p>Pastikan total presentasi</p>
+                                </div>
+
+                                <div class="note-box">
+                                    <h3>Catatan :</h3>
+
+                                    <p>
+                                        Presentase dapat diubah sesuai dengan
+                                        metode yang disepakati dalam kontrak kuliah
+                                    </p>
+                                </div>
+
+                            </div>
+
+                    </div>
+                </div>
+                
+
+
+                <div class="bungkus2">
+                    <!-- INPUT NILAI -->
+                    <div class="nilai-box">
+                        <div class="posisi-tombol2">
+                            <h2 class="input">Input Nilai Mahasiswa</h2>
+                            <button class="tombol2">Selesai</button>
+                            <button class="tombol2">Batal</button>
+                        </div>
+                        
+
+                        <div class="table-wrapper">
+
+                            <table class="nilai-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>NIM</th>
+                                        <th>Nama Mahasiswa</th>
+                                        <th>UTS (30%)</th>
+                                        <th>UAS (40%)</th>
+                                        <th>Tugas (20%)</th>
+                                        <th>Kehadiran (10%)</th>
+                                        <th>Nilai Akhir</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>2024010001</td>
+                                        <td>Ahmad Syarif</td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <span class="nilai-badge">88.6</span>
+                                        </td>
+
+                                        <td>
+                                            <span class="grade-badge">A</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2024010002</td>
+                                        <td>Budi Santoso</td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <span class="nilai-badge">81.2</span>
+                                        </td>
+
+                                        <td>
+                                            <span class="grade-badge">A-</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2024010003</td>
+                                        <td>Dian Pratama</td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <input type="text">
+                                        </td>
+
+                                        <td>
+                                            <span class="nilai-badge">91.2</span>
+                                        </td>
+
+                                        <td>
+                                            <span class="grade-badge">A</span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+                
+                
+
+            
+
+
+
+
+</body>
+<script src="dosen3.js"></script>
+</html>

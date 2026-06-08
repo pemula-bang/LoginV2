@@ -1,0 +1,316 @@
+:root {
+    --primary: #4F46E5;
+    --primary-light: #818CF8;
+    --bg-color: #e0e0e0;
+    --text-dark: #2D3748;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+}
+
+body {
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    padding-right: 2vw;
+}
+
+.kotak-pinggir {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    height: 100vh;
+    background: var(--bg-color);
+    box-shadow: 10px 0px 40px #afafaf;
+    gap: 5vh;
+}
+
+.posisi-logo {
+    display: flex;
+    width: 20vw;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.logo {
+    margin-top: 2vh;
+    width: 50px;
+    height: auto;
+}
+
+.text-logo {
+    color: var(--text-dark);
+    margin-top: 2vh;
+}
+
+.posisi-tombol {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+/*tombol======================================= */
+.tombol {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13vw;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    background: var(--bg-color);
+    box-shadow: inset 3px 3px 5px #c7c7c7,
+                inset -3px -3px 5px #f9f9f9;
+}
+
+
+.tombol .text-tombol {
+    color: var(--text-dark);
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    padding: 5px 15px;
+    transition: color 0.2s;
+}
+
+.tombol .lampu-tombol {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: var(--bg-color);
+    box-shadow: inset 1px 1px 3px #acacac,
+                inset -1px -1px 3px #ffffff;
+    transition: all 0.2s;
+}
+
+
+.tombol.aktif-input {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.tombol.aktif-input .text-tombol {
+    color: white;
+}
+
+.tombol.aktif-input .lampu-tombol {
+    background: white;
+    box-shadow: 0 0 8px #ffffff;
+}
+
+/* Wadah Tabel =================================*/
+.wadah-table {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-color);
+    box-shadow: inset 5px 5px 10px #acacac,
+                inset -5px -5px 10px #ffffff;
+    border: none;
+    margin-left: 5vw;
+}
+
+.judul-table {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pencarian {
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+    color: var(--text-dark);
+    font-weight: 500;
+    background: var(--bg-color);
+    box-shadow: inset 2px 2px 5px #aaaaaa,
+                inset -2px -2px 5px #ffffff;
+}
+
+/* Table Style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #555;
+}
+
+th {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    background: var(--primary);
+}
+
+td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 14px;
+}
+
+tr {
+    transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+    transform: translateX(10px);
+    color: rgb(255, 77, 0);
+}
+.nama-mahasiswa {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Pengaturan grade */
+.nilai {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 32px;
+    text-align: center;
+    color: var(--text-dark);
+    background: var(--bg-color);
+    box-shadow: 3px 3px 6px #acacac,
+                -3px -3px 6px #ffffff;
+}
+
+
+
+/* ============================================================================
+   RESPONSIVE UNTUK TAMPILAN MOBILE (PATOKAN HP) [makasih untuk Gemini]
+   ============================================================================ */
+@media screen and (max-width: 768px) {
+    /* 1. Ubah struktur utama biar numpuk ke bawah */
+    body {
+        flex-direction: column;
+        align-items: stretch;
+        padding-right: 0;
+        padding-bottom: 40px;
+    }
+
+    /* 2. Mengubah Sidebar jadi Header Atas */
+    .kotak-pinggir {
+        width: 100%;
+        height: auto;
+        gap: 15px;
+        padding-bottom: 20px;
+        box-shadow: 0px 5px 25px #afafaf;
+    }
+
+    .posisi-logo {
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-top: 0;
+        width: 40px;
+    }
+
+    .text-logo {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    /* 3. Atur tombol menu berjejer ke samping (horizontal) */
+    .posisi-tombol {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 5px;
+    }
+
+    .tombol {
+        width: 45%; /* Membagi dua tombol biar rata kanan-kiri di HP */
+        min-width: 130px;
+        height: 42px;
+    }
+
+    .tombol .text-tombol {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .tombol .lampu-tombol {
+        margin-right: 10px;
+        width: 7px;
+        height: 7px;
+    }
+
+    /* 4. Sesuaikan Wadah Tabel */
+    .wadah-table {
+        margin-left: 0; /* Hapus margin kiri bawaan desktop */
+        margin-top: 25px;
+        width: 100%;
+        padding: 5px;
+        border-radius: 0; /* Dibikin flat rata layar HP biar space-nya maksimal */
+        box-shadow: none; /* Hapus shadow luar biar gak double */
+    }
+
+    /* Header di atas tabel (Judul & Kolom Cari) */
+    .judul-table {
+        flex-direction: column; /* Numpuk ke bawah biar gak sesak */
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px 12px;
+    }
+
+    .judul-table h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .pencarian {
+        width: 100%; /* Kolom cari jadi full-width di HP biar enak ngetiknya */
+        height: 40px;
+    }
+
+    /* 5. Trik Scroll Pengaman Tabel Nilai */
+    /* Kita bungkus tabelnya dengan scroll horizontal otomatis */
+    .wadah-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 600px; /* Jaga ruang minimal agar kolom Nama, NIM, Nilai aman */
+    }
+
+    th, td {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    /* Matikan efek geser ekstrim dan ubah warna hover biar bersahabat di touch HP */
+    tbody tr:hover {
+        transform: none;
+        color: inherit; 
+    }
+}

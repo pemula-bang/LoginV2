@@ -1,0 +1,485 @@
+:root {
+    --primary: #4F46E5;
+    --primary-light: #818CF8;
+    --bg-color: #e0e0e0;
+    --text-dark: #2D3748;
+    --text-muted: #636363;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    display: flex;
+
+}
+
+/* ================================== */
+.kotak-pinggir {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    height: 100vh;
+    background: var(--bg-color);
+    box-shadow: 10px 0px 40px #afafaf;
+    gap: 5vh;
+}
+
+.posisi-logo {
+    display: flex;
+    width: 20vw;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.logo {
+    margin-top: 2vh;
+    width: 50px;
+    height: auto;
+}
+
+.text-logo {
+    color: var(--text-dark);
+    margin-top: 2vh;
+}
+
+.posisi-tombol {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.tombol {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13vw;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    background: var(--bg-color);
+    box-shadow: inset 3px 3px 5px #c7c7c7,
+                inset -3px -3px 5px #f9f9f9;
+}
+
+.tombol .text-tombol {
+    color: var(--text-dark);
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    padding: 5px 15px;
+    transition: color 0.2s;
+}
+
+.tombol .lampu-tombol {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: var(--bg-color);
+    box-shadow: inset 1px 1px 3px #acacac,
+                inset -1px -1px 3px #ffffff;
+    transition: all 0.2s;
+}
+
+
+.tombol.aktif-input {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.tombol.aktif-input .text-tombol {
+    color: white;
+}
+
+.tombol.aktif-input .lampu-tombol {
+    background: white;
+    box-shadow: 0 0 8px #ffffff;
+}
+
+
+.bungkus-utama {
+    flex: 1; 
+    height: 100vh;
+    overflow-y: auto; 
+    padding: 30px 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+/* ================= PENGATURAN KOMPONEN (ATAS) ================= */
+.setting-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* LEFT BOX */
+.setting-box {
+    flex: 6; /* Proporsi lebar */
+    padding: 25px;
+    background: var(--bg-color);
+    box-shadow: inset 5px 5px 10px #acacac,
+                inset -5px -5px 10px #ffffff;
+    border-radius: 12px;
+}
+
+.setting-box h3 {
+    font-size: 22px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.setting-box p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Komponen ===========================================*/
+.setting-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.setting-box th {
+    text-align: left;
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.setting-box td {
+    padding: 8px 0;
+}
+
+.setting-box input {
+    width: 90%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    background: var(--bg-color);
+    box-shadow: inset 3px 3px 6px #aaaaaa,
+                inset -3px -3px 6px #ffffff;
+}
+
+.tombol3 {
+    border-radius: 6px;
+    padding: 8px 15px;
+    border: none;
+    background: var(--bg-color);
+    box-shadow: 3px 3px 6px #bcbcbc,
+               -3px -3px 6px #ffffff;
+    color: #e53e3e; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.tombol3:active {
+    box-shadow: inset 2px 2px 5px #bcbcbc,
+                inset -2px -2px 5px #ffffff;
+    transform: scale(0.95);
+}
+
+/* RIGHT BOX =========================================*/
+.right-box {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-box, .note-box {
+    padding: 25px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: inset 5px 5px 10px #acacac,
+                inset -5px -5px 10px #ffffff;
+}
+
+.summary-box h3 {
+    color: var(--text-dark);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.summary-box p, .note-box p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.note-box h3 {
+    color: var(--text-dark);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ================= INPUT NILAI (BAWAH) ================= */
+.nilai-box {
+    padding: 25px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: inset 5px 5px 10px #acacac,
+                inset -5px -5px 10px #ffffff;
+}
+
+.posisi-tombol2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-right: auto; 
+}
+
+.tombol2 {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: var(--bg-color);
+    box-shadow: 4px 4px 8px #acacac,
+               -4px -4px 8px #ffffff;
+    transition: all 0.1s;
+}
+
+.tombol2:active {
+    box-shadow: inset 3px 3px 6px #acacac,
+                inset -3px -3px 6px #ffffff;
+    color: var(--primary);
+}
+
+/* TABLE NILAI ==============================*/
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.nilai-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nilai-table th {
+    background: var(--primary);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nilai-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #d1d1d1;
+    color: var(--text-muted);
+}
+
+.nilai-table tbody tr:hover {
+    background-color: #d8d8d8;
+}
+
+.nilai-table input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    background: var(--bg-color);
+    box-shadow: inset 2px 2px 4px #acacac,
+                inset -2px -2px 4px #ffffff;
+}
+
+/* nilai======================== */
+.nilai-badge, .grade-badge {
+    color: var(--text-dark);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    background: var(--bg-color);
+    box-shadow: 3px 3px 6px #acacac,
+               -3px -3px 6px #ffffff;
+}
+
+/* ============================================================================
+   RESPONSIVE UNTUK TAMPILAN MOBILE (PATOKAN HP) [makasih untuk Gemini]
+   ============================================================================ */
+@media screen and (max-width: 768px) {
+    /* 1. Ubah orientasi utama body menjadi vertikal */
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* 2. Sidebar bertransformasi menjadi Header Atas */
+    .kotak-pinggir {
+        width: 100%;
+        height: auto;
+        gap: 15px;
+        padding-bottom: 20px;
+        box-shadow: 0px 5px 25px #afafaf;
+    }
+
+    .posisi-logo {
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-top: 0;
+        width: 40px;
+    }
+
+    .text-logo {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    /* Tombol menu dibuat berbaris horizontal */
+    .posisi-tombol {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 5px;
+    }
+
+    .tombol {
+        width: 45%; /* Membagi dua space tombol menu di HP */
+        min-width: 130px;
+        height: 42px;
+    }
+
+    .tombol .text-tombol {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .tombol .lampu-tombol {
+        margin-right: 10px;
+        width: 7px;
+        height: 7px;
+    }
+
+    /* 3. Penyesuaian Konten Utama */
+    .bungkus-utama {
+        width: 100%;
+        height: auto;
+        padding: 20px 15px; /* Sempitkan padding luar agar area kerja lebih luas */
+        gap: 25px;
+    }
+
+    /* 4. Mengubah layout box pengaturan kiri & kanan menjadi menumpuk */
+    .setting-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    /* Set lebar penuh untuk box komponen maupun box ringkasan */
+    .setting-box, .right-box {
+        flex: none;
+        width: 100%;
+    }
+
+    .setting-box {
+        padding: 15px;
+    }
+
+    .setting-box h3 {
+        font-size: 18px;
+    }
+
+    /* Berikan sedikit ruang gulir pada tabel komponen agar inputnya konstan */
+    .setting-box {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .setting-box table {
+        min-width: 400px;
+    }
+
+    .setting-box input {
+        width: 100%; /* Input form memenuhi kolomnya sendiri */
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* 5. Bagian Input Nilai (Bawah) */
+    .nilai-box {
+        padding: 15px;
+    }
+
+    .posisi-tombol2 {
+        flex-direction: column; /* Judul dan aksi bertumpuk jika layar super sempit */
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .input {
+        font-size: 18px; /* Perkecil teks header "Input Nilai" */
+    }
+
+    /* Baris tombol aksi (Selesai/Batal) berjejer rapi */
+    .posisi-tombol2 .tombol2 {
+        width: 100%; /* Tombol aksi melebar penuh di HP biar gampang ditekan */
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* 6. Pengaman Tabel Nilai Utama */
+    .table-wrapper {
+        margin: 0 -5px; /* Optimalisasi space kiri kanan border tabel */
+    }
+
+    .nilai-table {
+        min-width: 650px; /* Menjaga agar kolom Nama, NIM, Tugas, UTS, UAS tidak remuk */
+    }
+
+    .nilai-table th, .nilai-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .nilai-table input {
+        width: 50px; /* Sesuaikan kotak input angka nilai di HP */
+        padding: 6px;
+    }
+}
